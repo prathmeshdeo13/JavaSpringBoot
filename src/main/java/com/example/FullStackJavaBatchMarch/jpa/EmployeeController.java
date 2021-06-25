@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -96,8 +97,8 @@ public class EmployeeController {
     }
 
     @GetMapping(value = "getEmpLike")
-    public List<Employee> getEmpLike(@RequestParam String name){
-      List<Employee> e = employeeRepository.findByNameLike(name);
+    public List<Map<String,String>> getEmpLike(@RequestParam String name){
+      List<Map<String,String>> e = employeeRepository.findByNameLike(name);
       return  e;
     }
 }
