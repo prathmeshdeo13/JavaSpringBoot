@@ -2,6 +2,7 @@ package com.example.FullStackJavaBatchMarch.OneToMany.domain;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Manager {
@@ -18,7 +19,7 @@ public class Manager {
 
 
     @OneToMany(mappedBy = "manager", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Employee employee;
+    private List<EmployeeM> employeeM;
 
     public int getId() {
         return id;
@@ -52,11 +53,11 @@ public class Manager {
         this.contact = contact;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public List<EmployeeM> getEmployee() {
+        return employeeM;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setEmployee(List<EmployeeM> employeeM) {
+        this.employeeM = employeeM;
     }
 }
