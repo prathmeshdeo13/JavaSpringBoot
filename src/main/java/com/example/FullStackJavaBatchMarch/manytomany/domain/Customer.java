@@ -1,5 +1,7 @@
 package com.example.FullStackJavaBatchMarch.manytomany.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class Customer {
     String customerAddress;
 
     @ManyToMany(mappedBy = "customer",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Bank> bank;
 
     public int getId() {

@@ -1,5 +1,7 @@
 package com.example.FullStackJavaBatchMarch.manytomany.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
