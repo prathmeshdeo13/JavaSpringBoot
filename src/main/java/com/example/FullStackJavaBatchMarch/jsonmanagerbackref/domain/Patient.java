@@ -19,7 +19,6 @@ public class Patient {
 
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JsonBackReference
-    @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
     public int getId() {

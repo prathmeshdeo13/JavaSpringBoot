@@ -21,4 +21,10 @@ public class DoctorController {
         doctorRepo.save(doctor);
         return "Doctor Saved...!!";
     }
+
+    @GetMapping(value = "getDoctor")
+    public String getDoctor(){
+        doctorRepo.findAll();
+        return "get doctor successfully";
+    }
 }
